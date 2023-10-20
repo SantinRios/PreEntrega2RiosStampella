@@ -179,14 +179,9 @@ body{
     grid-row: span 1;
   }
 } 
-
-.carousel-container{
-    display: flex; 
-    justify-content: center; 
-    align-items: center; 
-    height: 100vh;
-    max-width: 600px;
-    width: 100%;
+.carousel-container {
+    z-index: 10;
+    height: 100px;
 }
 
 /*
