@@ -17,6 +17,9 @@ a{
 img {
     max-width: 100%;
 }
+video {
+    max-width: 100%;
+}
 
 /* ----header---- */
 header{
@@ -74,12 +77,18 @@ header{
     border-radius: 10px;
 }
 
+@media (min-width: 768px) {
+    .portada-index {
+        flex-direction: row;
+    }
+}
+
 /*----fuentes----*/
 h1{
-    color:rgb(61, 45, 17);
+    color:rgb(116, 92, 50);
 }
 h2{
-    color:rgb(61, 45, 17);
+    color:rgb(116, 92, 50);
 }
 h3{
     color:rgb(116, 92, 50);
@@ -131,82 +140,61 @@ body{
     border: 2px solid rgb(88, 60, 11);
 }
 
-/*----galeria----*/
+/*----galeria nosotros----*/
 
-.gallery {
-    height: 100vh;
+.galeria {
+    padding: 1rem;
+    background-color: black;
+    
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+}
+.galeria-titulo {
+    color: rgb(116, 92, 50);
+}
+.cont-galeria {
+    display: flex;
+    flex-direction: column;
     gap: 1rem;
 }
 
-.videonosotros {
-    width: 200px;
-    height: 200px;
-    border-radius: 20%;
-    background-color: rgb(147, 163, 163); 
-    border: 2px solid black;
-    font-size: 2rem;
-    text-align: center;
-    line-height: 2;
-}
+/*
+max-widht ---> ancho maximo
+min-widht ---> ancho minimo
+orientation:
+landscape ---> apaisado, + ancho q alto
+portrait ---> retrato, + alto q ancho
+*/
 
-.imagenesnosotros1 {
-    width: 200px;
-    height: 200px;
-    border-radius: 20%;
-    background-color: rgb(147, 163, 163); 
-    border: 2px solid black;
-    font-size: 2rem;
-    text-align: center;
-    line-height: 2;
-}
-.imagenesnosotros2 {
-    width: 200px;
-    height: 200px;
-    border-radius: 20%;
-    background-color: rgb(147, 163, 163); 
-    border: 2px solid black;
-    font-size: 2rem;
-    text-align: center;
-    line-height: 2;
-}
+@media (min-width: 768px) {
+    .cont-galeria {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .videodestacado {
+        grid-column: span2;
+    }
+    } 
 
-@media(min-widht 768px){
-  .cont-galeria{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-  }
-  .video-pcpal{
-    grid-column: span 2;
-  }
-} 
-@media(min-widht 1200px){
-  .cont-galeria{
-    grid-template-columns: 2fr 1fr;
-    grid-template-rows: repeat(1,500px);
-  }
-  .cont-galeria video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  .cont-galeria img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  
-  .video-pcpal{
-    grid-column: span 1;
-    grid-row: span 1;
-  }
-} 
-.carousel-container {
-    z-index: 10;
-    height: 100px;
-}
+    @media (min-width: 1200px) {
+        .cont-galeria {
+            grid-template-columns: 2fr 1fr;
+            grid-template-rows:repeat(2,500px) ;
+        }
+        .cont-galeria img {
+            width: 100%;
+            height: 100%;
+        }
+        .cont-galeria video {
+            width: 100%;
+            height: 100%;
+        }
+        .videodestacado {
+            grid-column: span 1;
+            grid-row: span 2;
+        }
+    }
 
 /* Estilos para el formulario de contacto */
 .form-contacto {
@@ -314,12 +302,3 @@ body{
             "limpiar    enviar";
     }
 }
-
-/*
-max-widht ---> anch maximo
-min-widht ---> ancho minimo
-
-orientation:
-landscape ---> apaisado, + ancho q alto
-portrait ---> retrato, + alto q ancho
-*/
