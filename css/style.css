@@ -74,6 +74,32 @@ header{
     border-radius: 10px;
 }
 
+/*----fuentes----*/
+h1{
+    color:rgb(61, 45, 17);
+}
+h2{
+    color:rgb(61, 45, 17);
+}
+h3{
+    color:rgb(116, 92, 50);
+}
+
+.titulo_secundario{
+    color:rgb(116, 92, 50);
+}
+
+body{
+    background-color: rgb(217, 223, 223);
+    font-family: 'Victor Mono', monospace;
+}
+
+/* ---- footer ---- */
+.pie_de_pagina {
+    display: flex;
+    width: 100%;
+}
+
 /* ---- Tarjetas producto ---- */
 .productos{
     padding: 1rem;
@@ -104,49 +130,47 @@ header{
     border-radius: 10px;
     border: 2px solid rgb(88, 60, 11);
 }
-/*----fuentes----*/
-h1{
-    color:rgb(61, 45, 17);
-}
-h2{
-    color:rgb(61, 45, 17);
-}
-h3{
-    color:rgb(116, 92, 50);
-}
 
-.titulo_secundario{
-    color:rgb(116, 92, 50);
-}
-
-.form_control{
-    align-items: baseline;
-}
-.form_control label{
-font-weight: 400;
-}
-.form_control{
-    padding: 5px;
-}
-body{
-    background-color: rgb(217, 223, 223);
-    font-family: 'Victor Mono', monospace;
-}
 /*----galeria----*/
 
-.cont-galeria {
-    padding: 1rem;
-    background-color: rgb(147, 163, 163);
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    grid-template-rows: 2fr 1fr;
+.gallery {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
 }
-.vid-pcpal {
-    display: grid;
-    grid-row: span 2;
+
+.videonosotros {
+    width: 200px;
+    height: 200px;
+    border-radius: 20%;
+    background-color: rgb(147, 163, 163); 
+    border: 2px solid black;
+    font-size: 2rem;
+    text-align: center;
+    line-height: 2;
 }
-.galeria-titulo {
-    color: rgb(147, 163, 163);
+
+.imagenesnosotros1 {
+    width: 200px;
+    height: 200px;
+    border-radius: 20%;
+    background-color: rgb(147, 163, 163); 
+    border: 2px solid black;
+    font-size: 2rem;
+    text-align: center;
+    line-height: 2;
+}
+.imagenesnosotros2 {
+    width: 200px;
+    height: 200px;
+    border-radius: 20%;
+    background-color: rgb(147, 163, 163); 
+    border: 2px solid black;
+    font-size: 2rem;
+    text-align: center;
+    line-height: 2;
 }
 
 @media(min-widht 768px){
