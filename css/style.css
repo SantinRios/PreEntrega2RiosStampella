@@ -86,21 +86,39 @@ header{
 /*----fuentes----*/
 h1{
     color:rgb(116, 92, 50);
+    padding: 10px;
+    margin: 10px;
 }
 h2{
     color:rgb(116, 92, 50);
+    padding: 10px;
+    margin: 10px;
 }
 h3{
     color:rgb(116, 92, 50);
+    padding: 10px;
+    margin: 10px;
 }
 
 .titulo_secundario{
     color:rgb(116, 92, 50);
+    padding: 10px;
+    margin: 10px;
 }
 
 body{
     background-color: rgb(217, 223, 223);
     font-family: 'Victor Mono', monospace;
+}
+
+p{
+    padding: 10px;
+    margin: 10px;
+}
+
+i{
+    padding: 10px;
+    margin: 10px;
 }
 
 /* ---- footer ---- */
@@ -144,7 +162,7 @@ body{
 
 .galeria {
     padding: 1rem;
-    background-color: black;
+    background-color: rgb(147, 163, 163);
     
     display: flex;
     flex-direction: column;
@@ -172,7 +190,7 @@ portrait ---> retrato, + alto q ancho
         display: grid;
         grid-template-columns: 1fr 1fr;
     }
-    .videodestacado {
+    .imagendestacada {
         grid-column: span2;
     }
     } 
@@ -181,16 +199,15 @@ portrait ---> retrato, + alto q ancho
         .cont-galeria {
             grid-template-columns: 2fr 1fr;
             grid-template-rows:repeat(2,500px) ;
+            
         }
         .cont-galeria img {
             width: 100%;
             height: 100%;
+
+            object-fit: cover;
         }
-        .cont-galeria video {
-            width: 100%;
-            height: 100%;
-        }
-        .videodestacado {
+        .imagendestacada {
             grid-column: span 1;
             grid-row: span 2;
         }
