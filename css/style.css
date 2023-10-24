@@ -85,23 +85,23 @@ header{
 
 /*----fuentes----*/
 h1{
-    color:rgb(116, 92, 50);
+    color:rgb(26, 19, 7);
     padding: 10px;
     margin: 10px;
 }
 h2{
-    color:rgb(116, 92, 50);
+    color:rgb(26, 19, 7);
     padding: 10px;
     margin: 10px;
 }
 h3{
-    color:rgb(116, 92, 50);
+    color:rgb(26, 19, 7);
     padding: 10px;
     margin: 10px;
 }
 
 .titulo_secundario{
-    color:rgb(116, 92, 50);
+    color:rgb(26, 19, 7);
     padding: 10px;
     margin: 10px;
 }
@@ -169,7 +169,8 @@ i{
     gap: 1rem;
 }
 .galeria-titulo {
-    color: rgb(116, 92, 50);
+    color: rgb(26, 19, 7);
+    align-items: center;
 }
 .cont-galeria {
     display: flex;
