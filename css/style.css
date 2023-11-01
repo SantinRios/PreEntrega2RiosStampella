@@ -130,15 +130,23 @@ i{
 /* ---- Tarjetas producto ---- */
 .productos{
     padding: 1rem;
+    text-align: center;
 }
 .tarjeta-producto{
     border: 2px solid black;
     width: 250px;
     border-radius: 10px;
     overflow: hidden;
+    display: inline-block; 
+    margin-right: 20px;
+    text-align: center;
+    height: 100%;
 }
+
 .tarjeta-producto img{
-    width: 100%;
+    max-width: 100%; 
+    height: auto; 
+    display: block; 
 }
 .tarjeta-body{
     border-top: 2px solid black;
@@ -170,7 +178,7 @@ i{
 }
 .galeria-titulo {
     color: rgb(26, 19, 7);
-    align-items: center;
+    text-align: center;
 }
 .cont-galeria {
     display: flex;
@@ -298,12 +306,6 @@ portrait ---> retrato, + alto q ancho
     background-color: rgb(38, 83, 114); 
 }
 
-@media (max-width: 1070px) {
-    .form-contacto h1 {
-        font-size: 18px;
-    }
-}
-
 @media (max-width: 900px) {
     .form-contacto {
         width: auto;
@@ -320,3 +322,19 @@ portrait ---> retrato, + alto q ancho
             "limpiar    enviar";
     }
 }
+
+@media (max-width: 1070px) {
+    .form-contacto h1 {
+        font-size: 18px;
+    }
+}
+
+/* CARRUSEL */
+.my-carousel-container {
+    width: 40%; 
+    height: 40%;
+    margin: 0 auto; 
+  }
+  img.rounded {
+    border-radius: 10px;
+  }
