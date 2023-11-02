@@ -170,14 +170,14 @@ i{
 
 .galeria {
     padding: 1rem;
-    background-color: rgb(147, 163, 163);
+    background-color: rgb(26, 19, 7);
     
     display: flex;
     flex-direction: column;
     gap: 1rem;
 }
 .galeria-titulo {
-    color: rgb(26, 19, 7);
+    color: rgb(217, 223, 223);
     text-align: center;
 }
 .cont-galeria {
@@ -337,4 +337,15 @@ portrait ---> retrato, + alto q ancho
   }
   img.rounded {
     border-radius: 10px;
+  }
+
+  /*ESTILOS PREGUNTAS*/
+  .pregunta {
+    font-style: italic;
+    font-weight: bold;
+    background-color:  rgba(147, 163, 163, 0.5);
+  }
+  .respuesta {
+    margin: 0;
+    padding: 0;
   }
