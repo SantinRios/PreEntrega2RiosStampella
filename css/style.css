@@ -45,7 +45,7 @@ header{
     display: flex;
     gap: 1rem;
 }
-@media (min-width: 400px){
+@media (min-width: 480px){
     .header{
         flex-direction: row;
         width: 100vw;
@@ -65,8 +65,8 @@ header{
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    height: 50vh;
     width: 100vw;
+    height: 40vh;
     background-image: url(../img/zuecos1.jpg);
     background-position: center;
     background-size: cover;
@@ -115,13 +115,13 @@ body{
 }
 
 p{
-    padding: 10px;
-    margin: 10px;
+    padding: 5px;
+    margin: 5px;
 }
 
 i{
-    padding: 10px;
-    margin: 10px;
+    padding: 5px;
+    margin: 5px;
 }
 
 /* ---- footer ---- */
