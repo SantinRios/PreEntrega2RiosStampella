@@ -5,7 +5,7 @@
     text-align: center;
 }
 .tarjeta-producto{
-    border: 2px solid black;
+    border: 2px solid $color-negro;
     width: 250px;
     border-radius: 10px;
     overflow: hidden;
@@ -21,7 +21,7 @@
     display: block; 
 }
 .tarjeta-body{
-    border-top: 2px solid black;
+    border-top: 2px solid $color-negro;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -29,11 +29,11 @@
     padding: 5px;
 }
 .boton-tarjeta{
-    background-color: rgba(88, 60, 11, 0.466);
+    background-color: $color-marron;
     padding: 10px 8px;
     display: inline-block;
     width: 137px;
     color: black;
     border-radius: 10px;
-    border: 2px solid rgb(88, 60, 11);
+    border: 2px solid $color-marron;
 }

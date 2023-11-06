@@ -1,3 +1,9 @@
+$color-celeste:rgb(147, 163, 163);
+$color-negro: black;
+$color-marron: rgb(26, 19, 7);
+$color-blanco: rgb(217, 223, 223);
+$color-azul: rgba(52, 91, 117, 0.507);
+
 @import url('https://fonts.googleapis.com/css2?family=Victor+Mono:wght@200&display=swap');
 
 /**/
@@ -37,7 +43,7 @@ video {
     align-items: center;
 }
 .texto-portada{
-    background-color: rgba(52, 91, 117, 0.507);
+    background-color: $color-azul;
     text-align: center;
     padding: 16px;
     border-radius: 10px;
@@ -51,29 +57,29 @@ video {
 
 /*----fuentes----*/
 h1{
-    color:rgb(26, 19, 7);
+    color: $color-marron;
     padding: 10px;
     margin: 10px;
 }
 h2{
-    color:rgb(26, 19, 7);
+    color: $color-marron;
     padding: 10px;
     margin: 10px;
 }
 h3{
-    color:rgb(26, 19, 7);
+    color: $color-marron;
     padding: 10px;
     margin: 10px;
 }
 
 .titulo_secundario{
-    color:rgb(26, 19, 7);
+    color: $color-marron;
     padding: 10px;
     margin: 10px;
 }
 
 body{
-    background-color: rgb(217, 223, 223);
+    background-color: $color-blanco;
     font-family: 'Victor Mono', monospace;
 }
 
