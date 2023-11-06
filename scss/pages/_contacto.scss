@@ -6,7 +6,7 @@
     border-radius: 10px;
     padding: 20px;
     margin: 50px auto;
-    background-color: rgb(147, 163, 163);;
+    background-color: $color-celeste;
     grid-template-areas:
         "contacto  contacto"
         "texto    texto"
@@ -37,41 +37,23 @@
 .form-contacto textarea {
 
     border: none;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid $color-negro;
     padding: 10px;
 }
-
-.form-contacto label:nth-child(3) {
-    grid-area: nombre;
+.form-contacto {
+    @include grid-area(3, nombre);
+    @include grid-area(4, apellido);
+    @include grid-area(5, email);
+    @include grid-area(6, cel);
+    @include grid-area-center(7, mensaje);
+    @include grid-area-center(8, novedades);
 }
-
-.form-contacto label:nth-child(4) {
-    grid-area: apellido;
-}
-
-.form-contacto label:nth-child(5) {
-    grid-area: email;
-}
-
-.form-contacto label:nth-child(6) {
-    grid-area: cel;
-}
-
-.form-contacto label:nth-child(7) {
-    grid-area: mensaje;
-}
-
-.form-contacto label:nth-child(8) {
-    grid-area: novedades;
-    text-align: center;
-}
-
 .form-contacto .limpiar {
     grid-area: limpiar;
     justify-self: end;
     padding: 8px;
     margin-right: 10px;
-    background-color: rgb(38, 83, 114);
+    background-color: $color-marron;
     border-radius: 5px;
 }
 
@@ -80,7 +62,7 @@
     justify-self: start;
     padding: 8px;
     margin-left: 10px;
-    background-color: rgb(38, 83, 114); 
+    background-color: $color-marron; 
 }
 
 @media (max-width: 900px) {

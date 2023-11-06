@@ -72,11 +72,6 @@ h3{
     margin: 10px;
 }
 
-.titulo_secundario{
-    color: $color-marron;
-    padding: 10px;
-    margin: 10px;
-}
 
 body{
     background-color: $color-blanco;
@@ -91,4 +86,14 @@ p{
 i{
     padding: 5px;
     margin: 5px;
+}
+@mixin grid-area($index, $area) {
+    .form-contacto label:nth-child(#{$index}) {
+        grid-area: #{$area};
+    }
+}
+
+@mixin grid-area-center($index, $area) {
+    @include grid-area($index, $area);
+    text-align: center;
 }
