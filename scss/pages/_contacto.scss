@@ -1,0 +1,107 @@
+
+/* Estilos para el formulario de contacto */
+.form-contacto {
+    display: grid;
+    width: 70%;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 50px auto;
+    background-color: rgb(147, 163, 163);;
+    grid-template-areas:
+        "contacto  contacto"
+        "texto    texto"
+        "nombre   apellido"
+        "email     cel"
+        "mensaje   mensaje"
+        "novedades novedades"
+        "limpiar    enviar";
+}
+
+.form-contacto h2 {
+    grid-area: contacto;
+    text-align: center;
+}
+
+.form-contacto p {
+    grid-area: texto;
+    text-align: center;
+}
+
+.form-contacto label {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.form-contacto input,
+.form-contacto textarea {
+
+    border: none;
+    border-bottom: 1px solid black;
+    padding: 10px;
+}
+
+.form-contacto label:nth-child(3) {
+    grid-area: nombre;
+}
+
+.form-contacto label:nth-child(4) {
+    grid-area: apellido;
+}
+
+.form-contacto label:nth-child(5) {
+    grid-area: email;
+}
+
+.form-contacto label:nth-child(6) {
+    grid-area: cel;
+}
+
+.form-contacto label:nth-child(7) {
+    grid-area: mensaje;
+}
+
+.form-contacto label:nth-child(8) {
+    grid-area: novedades;
+    text-align: center;
+}
+
+.form-contacto .limpiar {
+    grid-area: limpiar;
+    justify-self: end;
+    padding: 8px;
+    margin-right: 10px;
+    background-color: rgb(38, 83, 114);
+    border-radius: 5px;
+}
+
+.form-contacto .enviar {
+    grid-area: enviar;
+    justify-self: start;
+    padding: 8px;
+    margin-left: 10px;
+    background-color: rgb(38, 83, 114); 
+}
+
+@media (max-width: 900px) {
+    .form-contacto {
+        width: auto;
+        margin-top: 0;
+        grid-template-areas:
+            "contacto  contacto"
+            "texto    texto"
+            "nombre   nombre"
+            "apellido apellido"
+            "email    email"
+            "cel       cel"
+            "mensaje   mensaje"
+            "novedades novedades"
+            "limpiar    enviar";
+    }
+}
+
+@media (max-width: 1070px) {
+    .form-contacto h1 {
+        font-size: 18px;
+    }
+}
