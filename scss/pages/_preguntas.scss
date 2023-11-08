@@ -4,6 +4,11 @@
     font-style: italic;
     font-weight: bold;
     background-color: $color-celeste;
+    transition-duration: 1.5s;
+  }
+  .pregunta:hover{
+    transform: rotate3d(360deg);
+    box-shadow: 5px 5px 4px 10px;
   }
   .respuesta {
     margin: 0;
