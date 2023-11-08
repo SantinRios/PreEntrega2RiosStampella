@@ -3,7 +3,7 @@
 
 .galeria {
     padding: 1rem;
-    background-color: rgb(26, 19, 7);
+    background: linear-gradient($color-celeste, $color-negro);
     
     display: flex;
     flex-direction: column;

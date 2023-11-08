@@ -240,7 +240,7 @@ img.rounded {
 /*----galeria nosotros----*/
 .galeria {
   padding: 1rem;
-  background-color: rgb(26, 19, 7);
+  background: linear-gradient(rgb(147, 163, 163), black);
   display: flex;
   flex-direction: column;
   gap: 1rem;
