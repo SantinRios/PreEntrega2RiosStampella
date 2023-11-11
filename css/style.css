@@ -355,7 +355,7 @@ portrait ---> retrato, + alto q ancho
   padding: 10px 8px;
   display: inline-block;
   width: 137px;
-  color: black;
+  color: rgb(147, 163, 163);
   border-radius: 10px;
   border: 2px solid rgb(26, 19, 7);
 }
