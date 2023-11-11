@@ -187,7 +187,7 @@ img.rounded {
 .form-contacto input,
 .form-contacto textarea {
   border: none;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid rgb(147, 163, 163);
   padding: 10px;
 }
 
