@@ -54,9 +54,18 @@ video {
     box-shadow: 5px 5px 4px 10px;
 }
 
+@media (min-width: 300px) and (max-widht: 767px) {
+    .portada-index {
+        flex-direction: row;
+        width: 100vw;
+        height: 40vh;
+    }
+}
 @media (min-width: 768px) {
     .portada-index {
         flex-direction: row;
+        width: 100vw;
+        height: 40vh;
     }
 }
 
