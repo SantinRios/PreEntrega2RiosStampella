@@ -1,11 +1,11 @@
 
   /*ESTILOS PREGUNTAS*/
-  .PregyResp h2 p {
+
+  .pregunta {
     display: flex;
     text-align: center;
-    margin: 0 auto;
-  }
-  .pregunta h2 {
+    align-items: center;
+    justify-content: center;
     font-style: italic;
     font-weight: bold;
     background-color: $color-celeste;
@@ -15,7 +15,11 @@
     transform: rotate3d(360deg);
     box-shadow: 5px 5px 4px 10px;
   }
-  .respuesta p {
+  .respuesta {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
     margin: 0;
     padding: 0;
   }

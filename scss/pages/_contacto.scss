@@ -74,14 +74,6 @@
         border-radius: 5px;
     }
 
-.form-contacto .logos-contacto {
-    display: flex;
-    margin-top: 100px;
-    margin-bottom: 150px;
-    justify-content: center;
-    gap: 30px;
-}
-
 @media(max-width: 1070px){
     .form-contacto{
         h1{
@@ -102,9 +94,5 @@
                                 "mensaje   mensaje"
                                 "novedades novedades"
                                 "limpiar    enviar";
-    }
-.form-contacto .logos-contacto {
-        flex-direction: column;
-        align-items: center;
     }
 }
