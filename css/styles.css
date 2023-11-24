@@ -1,0 +1,379 @@
+@import url("https://fonts.googleapis.com/css2?family=Victor+Mono:wght@200&display=swap");
+/**/
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+ul,
+ol {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+img {
+  max-width: 100%;
+}
+
+video {
+  max-width: 100%;
+}
+
+/* ---- Portada Index ---- */
+.portada-index {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100vw;
+  height: 40vh;
+  background-image: url(../img/zuecos1.jpg);
+  background-position: center;
+  background-size: cover;
+  justify-content: center;
+  align-items: center;
+}
+
+.texto-portada {
+  background-color: rgba(52, 91, 117, 0.507);
+  text-align: center;
+  padding: 16px;
+  border-radius: 10px;
+  transition-duration: 0.5s;
+}
+
+.texto-portada:hover {
+  transform: rotate(360deg);
+  box-shadow: 5px 5px 4px 10px;
+}
+
+@media (min-width: 300px) and (max-widht: 767px) {
+  .portada-index {
+    flex-direction: row;
+    width: 100vw;
+    height: 40vh;
+  }
+}
+@media (min-width: 768px) {
+  .portada-index {
+    flex-direction: row;
+    width: 100vw;
+    height: 40vh;
+  }
+}
+/*----fuentes----*/
+h1 {
+  color: rgb(26, 19, 7);
+  padding: 10px;
+  margin: 10px;
+}
+
+h2 {
+  color: rgb(26, 19, 7);
+  padding: 10px;
+  margin: 10px;
+}
+
+h3 {
+  color: rgb(26, 19, 7);
+  padding: 10px;
+  margin: 10px;
+}
+
+body {
+  background-color: rgb(217, 223, 223);
+  font-family: "Victor Mono", monospace;
+}
+
+p {
+  padding: 5px;
+  margin: 5px;
+}
+
+i {
+  padding: 5px;
+  margin: 5px;
+}
+
+/* ---- footer ---- */
+.pie_de_pagina {
+  display: flex;
+  width: 100%;
+}
+
+/* ----header---- */
+header {
+  background-color: rgb(147, 163, 163);
+  width: 100vw;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: space-between;
+}
+
+header nav {
+  align-self: stretch;
+}
+
+.active {
+  text-decoration: underline;
+}
+
+.logo-encabezado {
+  display: flex;
+  justify-content: start;
+  width: 100px;
+  height: 100px;
+}
+
+.nav-list {
+  display: flex;
+  gap: 1rem;
+}
+
+@media (min-width: 480px) {
+  .header {
+    flex-direction: row;
+    width: 100vw;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .nav-list {
+    display: flex;
+    gap: 1rem;
+  }
+}
+.titulo_pcpl {
+  text-align: center;
+}
+
+.titulo_secundario {
+  color: rgb(26, 19, 7);
+  padding: 10px;
+  margin: 10px;
+}
+
+/* CARRUSEL */
+.my-carousel-container {
+  width: 40%;
+  height: 40%;
+  margin: 0 auto;
+}
+
+img.rounded {
+  border-radius: 10px;
+}
+
+/* Estilos para el formulario de contacto */
+.form-contacto {
+  display: grid;
+  width: 70%;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 50px auto;
+  background-color: rgb(147, 163, 163);
+  grid-template-areas: "contacto  contacto" "texto    texto" "nombre   apellido" "email     cel" "mensaje   mensaje" "novedades novedades" "limpiar    enviar";
+}
+
+.form-contacto h2 {
+  grid-area: contacto;
+  text-align: center;
+}
+
+.form-contacto p {
+  grid-area: texto;
+  text-align: center;
+}
+
+.form-contacto label {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.form-contacto input,
+.form-contacto textarea {
+  border: none;
+  border-bottom: 1px solid rgb(147, 163, 163);
+  padding: 10px;
+}
+
+.form-contacto {
+  text-align: center;
+  text-align: center;
+}
+.form-contacto .form-contacto label:nth-child(3) {
+  grid-area: nombre;
+}
+.form-contacto .form-contacto label:nth-child(4) {
+  grid-area: apellido;
+}
+.form-contacto .form-contacto label:nth-child(5) {
+  grid-area: email;
+}
+.form-contacto .form-contacto label:nth-child(6) {
+  grid-area: cel;
+}
+.form-contacto .form-contacto label:nth-child(7) {
+  grid-area: mensaje;
+}
+.form-contacto .form-contacto label:nth-child(8) {
+  grid-area: novedades;
+}
+
+.form-contacto .limpiar {
+  grid-area: limpiar;
+  justify-self: end;
+  padding: 8px;
+  margin-right: 10px;
+  background-color: rgb(26, 19, 7);
+  border-radius: 5px;
+}
+
+.form-contacto .enviar {
+  grid-area: enviar;
+  justify-self: start;
+  padding: 8px;
+  margin-left: 10px;
+  background-color: rgb(26, 19, 7);
+}
+
+@media (max-width: 900px) {
+  .form-contacto {
+    width: auto;
+    margin-top: 0;
+    grid-template-areas: "contacto  contacto" "texto    texto" "nombre   nombre" "apellido apellido" "email    email" "cel       cel" "mensaje   mensaje" "novedades novedades" "limpiar    enviar";
+  }
+}
+@media (max-width: 1070px) {
+  .form-contacto h1 {
+    font-size: 18px;
+  }
+}
+/*----galeria nosotros----*/
+.galeria {
+  padding: 1rem;
+  background: linear-gradient(rgb(147, 163, 163), black);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.galeria-titulo {
+  color: rgb(217, 223, 223);
+  text-align: center;
+}
+
+.cont-galeria {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  transition-duration: 1.5s;
+}
+
+.cont-galeria:hover {
+  transform: rotate(360deg);
+  box-shadow: 5px 5px 4px 10px;
+}
+
+/*
+max-widht ---> ancho maximo
+min-widht ---> ancho minimo
+orientation:
+landscape ---> apaisado, + ancho q alto
+portrait ---> retrato, + alto q ancho
+*/
+@media (min-width: 768px) {
+  .cont-galeria {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .imagendestacada {
+    grid-column: span2;
+  }
+}
+@media (min-width: 1200px) {
+  .cont-galeria {
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: repeat(2, 500px);
+  }
+  .cont-galeria img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .imagendestacada {
+    grid-column: span 1;
+    grid-row: span 2;
+  }
+}
+/*ESTILOS PREGUNTAS*/
+.pregunta {
+  font-style: italic;
+  font-weight: bold;
+  background-color: rgb(147, 163, 163);
+  transition-duration: 1.5s;
+  text-align: center;
+}
+
+.pregunta:hover {
+  transform: rotate3d(360deg);
+  box-shadow: 5px 5px 4px 10px;
+}
+
+.respuesta {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+/* ---- Tarjetas producto ---- */
+.productos {
+  padding: 1rem;
+  text-align: center;
+}
+
+.tarjeta-producto {
+  border: 2px solid black;
+  width: 250px;
+  border-radius: 10px;
+  overflow: hidden;
+  display: inline-block;
+  margin-right: 20px;
+  text-align: center;
+  height: 100%;
+}
+
+.tarjeta-producto img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.tarjeta-body {
+  border-top: 2px solid black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding: 5px;
+}
+
+.boton-tarjeta {
+  background-color: rgb(26, 19, 7);
+  padding: 10px 8px;
+  display: inline-block;
+  width: 137px;
+  color: rgb(147, 163, 163);
+  border-radius: 10px;
+  border: 2px solid rgb(26, 19, 7);
+}
+
+/*# sourceMappingURL=styles.css.map */
