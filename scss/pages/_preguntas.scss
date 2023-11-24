@@ -1,11 +1,11 @@
 
   /*ESTILOS PREGUNTAS*/
   .PregyResp h2 p {
+    display: flex;
     text-align: center;
     margin: 0 auto;
   }
   .pregunta h2 {
-    text-align: center;
     font-style: italic;
     font-weight: bold;
     background-color: $color-celeste;
@@ -16,7 +16,6 @@
     box-shadow: 5px 5px 4px 10px;
   }
   .respuesta p {
-    text-align: center;
     margin: 0;
     padding: 0;
   }
