@@ -1,89 +1,108 @@
-
 /* Estilos para el formulario de contacto */
-.form-contacto {
+.form-contacto{
     display: grid;
     width: 70%;
     border-radius: 10px;
     padding: 20px;
     margin: 50px auto;
     background-color: $color-celeste;
-    grid-template-areas:
-        "contacto  contacto"
-        "texto    texto"
-        "nombre   apellido"
-        "email     cel"
-        "mensaje   mensaje"
-        "novedades novedades"
-        "limpiar    enviar";
-}
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:   "contacto  contacto"
+                            "texto    texto"
+                            "nombre   apellido"
+                            "email     cel"
+                            "mensaje   mensaje"
+                            "novedades novedades"
+                            "limpiar    enviar";
+   }
+.form-contacto h2{
+        grid-area: contacto;
+        text-align: center;
+    }
+.form-contacto p{
+        grid-area: texto;
+        text-align: center;
+    }
+.form-contacto label{
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+     }
+.form-contacto input, 
+.form-contacto textarea{
+            background-color: $color-marron;
+            border: none;
+            border-bottom: 1px solid $color-celeste;
+            padding: 10px;
+        }
+        &:nth-child(3){
+            grid-area: nombre;
+        }
+        &:nth-child(4){
+            grid-area: apellido;
+        }
+        &:nth-child(5){
+            grid-area: email;
+        }
+        &:nth-child(6){
+            grid-area: cel;
+        }
+        &:nth-child(7){
+            grid-area: mensaje;
+        }
+        &:nth-child(8){
+            grid-area: novedades;
+            text-align: center;
+        }
+    
+.form-contacto .limpiar{
+        grid-area: limpiar;
+        justify-self: end;
+        padding: 8px;
+        margin-right: 10px;
+        background-color: $color-marron;
+        border-radius: 5px;
+    }
+.form-contacto .enviar{
+        grid-area: enviar;
+        justify-self: start;
+        padding: 8px;
+        margin-left: 10px;
+        background-color: $color-marron;
+        border-radius: 5px;
+    }
 
-.form-contacto h2 {
-    grid-area: contacto;
-    text-align: center;
-}
-
-.form-contacto p {
-    grid-area: texto;
-    text-align: center;
-}
-
-.form-contacto label {
+.form-contacto .logos-contacto {
     display: flex;
-    flex-direction: column;
-    padding: 10px;
+    margin-top: 100px;
+    margin-bottom: 150px;
+    justify-content: center;
+    gap: 30px;
 }
 
-.form-contacto input,
-.form-contacto textarea {
-
-    border: none;
-    border-bottom: 1px solid $color-celeste;
-    padding: 10px;
-}
-.form-contacto {
-    @include grid-area(3, nombre);
-    @include grid-area(4, apellido);
-    @include grid-area(5, email);
-    @include grid-area(6, cel);
-    @include grid-area-center(7, mensaje);
-    @include grid-area-center(8, novedades);
-}
-.form-contacto .limpiar {
-    grid-area: limpiar;
-    justify-self: end;
-    padding: 8px;
-    margin-right: 10px;
-    background-color: $color-marron;
-    border-radius: 5px;
-}
-
-.form-contacto .enviar {
-    grid-area: enviar;
-    justify-self: start;
-    padding: 8px;
-    margin-left: 10px;
-    background-color: $color-marron; 
-}
-
-@media (max-width: 900px) {
-    .form-contacto {
-        width: auto;
-        margin-top: 0;
-        grid-template-areas:
-            "contacto  contacto"
-            "texto    texto"
-            "nombre   nombre"
-            "apellido apellido"
-            "email    email"
-            "cel       cel"
-            "mensaje   mensaje"
-            "novedades novedades"
-            "limpiar    enviar";
+@media(max-width: 1070px){
+    .form-contacto{
+        h1{
+            font-size: 18px;
+        }
     }
 }
-
-@media (max-width: 1070px) {
-    .form-contacto h1 {
-        font-size: 18px;
+@media(max-width:900px){
+    .form-contacto{
+        width: auto;
+        margin-top: 0;
+        grid-template-areas:   "contacto  contacto"
+                                "texto    texto"
+                                "nombre   nombre"
+                                "apellido apellido"
+                                "email    email"  
+                                "cel       cel"
+                                "mensaje   mensaje"
+                                "novedades novedades"
+                                "limpiar    enviar";
+    }
+.form-contacto .logos-contacto {
+        flex-direction: column;
+        align-items: center;
     }
 }

@@ -1,18 +1,22 @@
 
   /*ESTILOS PREGUNTAS*/
-  .pregunta {
+  .PregyResp h2 p {
+    text-align: center;
+    margin: 0 auto;
+  }
+  .pregunta h2 {
+    text-align: center;
     font-style: italic;
     font-weight: bold;
     background-color: $color-celeste;
     transition-duration: 1.5s;
-    text-align: center;
   }
-  .pregunta:hover{
+  .pregunta:hover {
     transform: rotate3d(360deg);
     box-shadow: 5px 5px 4px 10px;
   }
-  .respuesta {
+  .respuesta p {
+    text-align: center;
     margin: 0;
     padding: 0;
-    text-align: center;
   }
