@@ -5,6 +5,7 @@
     font-weight: bold;
     background-color: $color-celeste;
     transition-duration: 1.5s;
+    text-align: center;
   }
   .pregunta:hover{
     transform: rotate3d(360deg);
@@ -13,4 +14,5 @@
   .respuesta {
     margin: 0;
     padding: 0;
+    text-align: center;
   }
