@@ -229,12 +229,16 @@ img.rounded {
   justify-self: end;
   padding: 8px;
   margin-right: 10px;
+  background-color: rgb(217, 223, 223);
+  border-radius: 5px;
 }
 .form-contacto .enviar {
   grid-area: enviar;
   justify-self: start;
   padding: 8px;
   margin-left: 10px;
+  background-color: rgb(217, 223, 223);
+  border-radius: 5px;
 }
 
 @media (max-width: 1070px) {
