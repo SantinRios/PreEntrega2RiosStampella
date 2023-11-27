@@ -29,7 +29,7 @@
         input, textarea{
             background-color: $color-celeste;
             border: none;
-            border-bottom: 1px solid black;
+            border-bottom: 1px solid $color-blanco;
             padding: 10px;
         }
         &:nth-child(3){
@@ -46,27 +46,26 @@
         }
         &:nth-child(7){
             grid-area: mensaje;
+            text-align: center;
+            justify-self: center;
         }
         &:nth-child(8){
             grid-area: novedades;
             text-align: center;
+            justify-self: center;
         }
     }
-    .limpiar{
+.limpiar {
         grid-area: limpiar;
         justify-self: end;
         padding: 8px;
         margin-right: 10px;
-        background-color: $color-celeste;
-        border-radius: 5px;
     }
-    .enviar{
+.enviar {
         grid-area: enviar;
         justify-self: start;
         padding: 8px;
         margin-left: 10px;
-        background-color: $color-celeste;
-        border-radius: 5px;
     }
 }
 
