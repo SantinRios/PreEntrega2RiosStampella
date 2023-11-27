@@ -103,29 +103,47 @@ i{
 }
 
 /*Menu hamburguesa*/
-/* Estilos para el fondo transparente del menú desplegable */
+
 .navbar-toggler {
-    background-color: transparent;
+    background-color: transparent !important;
     border: none;
   }
-.navbar-toggler-icon {
-    background-color: $color-marron
+
+  .navbar-toggler-icon {
+    background-color: $color-azul;
   }
 
-  /* Estilos adicionales para el menú desplegable cuando está abierto */
   .navbar-collapse {
     background-color: $color-azul;
     position: absolute;
-    top: 50px;
+    top: 56px;
     right: 0;
     left: auto;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px $color-negro;
   }
-/* Estilos para los elementos del menú desplegable */
+
   .navbar-nav {
+    display: flex;
+    justify-content: space-between;
     width: 100%;
-    text-align: right;
   }
- .navbar-nav .nav-item {
+
+  .navbar-nav .nav-item {
     padding: 10px;
+  }
+
+  .navbar {
+    background-color: transparent !important;
+  }
+
+  @media (max-width: 992px) {
+    .navbar-nav {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .navbar-nav .nav-item {
+      padding: 10px 0;
+      text-align: center;
+    }
   }
