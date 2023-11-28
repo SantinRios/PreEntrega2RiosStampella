@@ -40,7 +40,7 @@ video {
 }
 
 .texto-portada {
-  background-color: rgba(52, 91, 117, 0.507);
+  background-color: rgba(52, 91, 117, 0.363);
   text-align: center;
   padding: 16px;
   border-radius: 10px;
@@ -100,23 +100,29 @@ i {
   margin: 5px;
 }
 
-/*Menu hamburguesa*/
+/*nav bar y menu hamburguesa*/
+.container {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
 .navbar-toggler {
-  background-color: transparent !important;
-  border: none;
-  margin-left: auto; /* Alinea el icono a la derecha */
+  display: flex;
+  justify-content: end;
+  background-color: rgba(52, 91, 117, 0.363);
+  border-radius: 5px;
+  margin-left: auto;
 }
 
 .navbar-toggler-icon {
-  background-color: rgba(52, 91, 117, 0.507);
+  background-color: rgba(52, 91, 117, 0.363);
 }
 
 .navbar-collapse {
-  background-color: rgba(52, 91, 117, 0.507);
-  position: absolute;
-  top: 56px;
-  right: 0;
-  left: auto;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  background-color: rgba(52, 91, 117, 0.363);
   box-shadow: 0 0 10px black;
 }
 
@@ -131,17 +137,18 @@ i {
 }
 
 .navbar {
-  background-color: transparent !important;
+  background-color: transparent;
 }
 
 @media (max-width: 992px) {
   .navbar-nav {
+    display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: end;
   }
   .navbar-nav .nav-item {
     padding: 10px 0;
-    text-align: center;
+    text-align: end;
   }
 }
 /* ---- footer ---- */
@@ -164,7 +171,9 @@ header {
 }
 
 header nav {
-  align-self: stretch;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 }
 
 .active {
@@ -184,6 +193,11 @@ header nav {
 }
 
 @media (min-width: 480px) {
+  .container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+  }
   .header {
     flex-direction: row;
     width: 100vw;
@@ -192,6 +206,7 @@ header nav {
   }
   .navbarNav {
     display: flex;
+    justify-content: center;
     gap: 1rem;
   }
 }
@@ -241,9 +256,9 @@ img.rounded {
   padding: 10px;
 }
 .form-contacto label input, .form-contacto label textarea {
-  background-color: rgb(147, 163, 163);
+  background-color: rgb(217, 223, 223);
   border: none;
-  border-bottom: 1px solid rgb(217, 223, 223);
+  border-bottom: 1px solid black;
   padding: 10px;
 }
 .form-contacto label:nth-child(3) {
