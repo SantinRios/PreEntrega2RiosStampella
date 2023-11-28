@@ -2,7 +2,7 @@ $color-celeste:rgb(147, 163, 163);
 $color-negro: black;
 $color-marron: rgb(26, 19, 7);
 $color-blanco: rgb(217, 223, 223);
-$color-azul: rgba(52, 91, 117, 0.507);
+$color-azul: rgba(52, 91, 117, 0.363);
 
 @import url('https://fonts.googleapis.com/css2?family=Victor+Mono:wght@200&display=swap');
 
@@ -102,11 +102,18 @@ i{
     margin: 5px;
 }
 
-/*Menu hamburguesa*/
+/*nav bar y menu hamburguesa*/
+.container {
+    display: flex;
+    flex-wrap: nowrap;
+}
 
 .navbar-toggler {
-    background-color: transparent !important;
-    border: none;
+    display: flex;
+    justify-content: end;
+    background-color: $color-azul;
+    border-radius: 5px;
+    margin-left: auto;
   }
 
   .navbar-toggler-icon {
@@ -114,11 +121,10 @@ i{
   }
 
   .navbar-collapse {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
     background-color: $color-azul;
-    position: absolute;
-    top: 56px;
-    right: 0;
-    left: auto;
     box-shadow: 0 0 10px $color-negro;
   }
 
@@ -133,17 +139,18 @@ i{
   }
 
   .navbar {
-    background-color: transparent !important;
+    background-color: transparent;
   }
 
   @media (max-width: 992px) {
     .navbar-nav {
+      display: flex;  
       flex-direction: column;
-      align-items: center;
+      align-items: end;
     }
 
     .navbar-nav .nav-item {
       padding: 10px 0;
-      text-align: center;
+      text-align: end;
     }
   }

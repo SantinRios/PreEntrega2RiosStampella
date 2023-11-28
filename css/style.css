@@ -40,7 +40,7 @@ video {
 }
 
 .texto-portada {
-  background-color: rgba(52, 91, 117, 0.507);
+  background-color: rgba(52, 91, 117, 0.363);
   text-align: center;
   padding: 16px;
   border-radius: 10px;
@@ -52,9 +52,18 @@ video {
   box-shadow: 5px 5px 4px 10px;
 }
 
+@media (min-width: 300px) and (max-widht: 767px) {
+  .portada-index {
+    flex-direction: row;
+    width: 100vw;
+    height: 40vh;
+  }
+}
 @media (min-width: 768px) {
   .portada-index {
     flex-direction: row;
+    width: 100vw;
+    height: 40vh;
   }
 }
 /*----fuentes----*/
@@ -91,10 +100,62 @@ i {
   margin: 5px;
 }
 
+/*nav bar y menu hamburguesa*/
+.container {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.navbar-toggler {
+  display: flex;
+  justify-content: end;
+  background-color: rgba(52, 91, 117, 0.363);
+  border-radius: 5px;
+  margin-left: auto;
+}
+
+.navbar-toggler-icon {
+  background-color: rgba(52, 91, 117, 0.363);
+}
+
+.navbar-collapse {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  background-color: rgba(52, 91, 117, 0.363);
+  box-shadow: 0 0 10px black;
+}
+
+.navbar-nav {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.navbar-nav .nav-item {
+  padding: 10px;
+}
+
+.navbar {
+  background-color: transparent;
+}
+
+@media (max-width: 992px) {
+  .navbar-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+  }
+  .navbar-nav .nav-item {
+    padding: 10px 0;
+    text-align: end;
+  }
+}
 /* ---- footer ---- */
 .pie_de_pagina {
   display: flex;
   width: 100%;
+  background-color: rgb(217, 223, 223);
 }
 
 /* ----header---- */
@@ -109,30 +170,43 @@ header {
   justify-content: space-between;
 }
 
+header nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
 .active {
   text-decoration: underline;
 }
 
 .logo-encabezado {
   display: flex;
+  justify-content: start;
   width: 100px;
   height: 100px;
 }
 
-.nav-list {
+.navbarNav {
   display: flex;
   gap: 1rem;
 }
 
 @media (min-width: 480px) {
+  .container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+  }
   .header {
     flex-direction: row;
     width: 100vw;
     justify-content: space-between;
     align-items: center;
   }
-  .nav-list {
+  .navbarNav {
     display: flex;
+    justify-content: center;
     gap: 1rem;
   }
 }
@@ -165,82 +239,77 @@ img.rounded {
   padding: 20px;
   margin: 50px auto;
   background-color: rgb(147, 163, 163);
+  grid-template-columns: 1fr 1fr;
   grid-template-areas: "contacto  contacto" "texto    texto" "nombre   apellido" "email     cel" "mensaje   mensaje" "novedades novedades" "limpiar    enviar";
 }
-
 .form-contacto h2 {
   grid-area: contacto;
   text-align: center;
 }
-
 .form-contacto p {
   grid-area: texto;
   text-align: center;
 }
-
 .form-contacto label {
   display: flex;
   flex-direction: column;
   padding: 10px;
 }
-
-.form-contacto input,
-.form-contacto textarea {
+.form-contacto label input, .form-contacto label textarea {
+  background-color: rgb(217, 223, 223);
   border: none;
-  border-bottom: 1px solid rgb(147, 163, 163);
+  border-bottom: 1px solid black;
   padding: 10px;
 }
-
-.form-contacto {
-  text-align: center;
-  text-align: center;
-}
-.form-contacto .form-contacto label:nth-child(3) {
+.form-contacto label:nth-child(3) {
   grid-area: nombre;
 }
-.form-contacto .form-contacto label:nth-child(4) {
+.form-contacto label:nth-child(4) {
   grid-area: apellido;
 }
-.form-contacto .form-contacto label:nth-child(5) {
+.form-contacto label:nth-child(5) {
   grid-area: email;
 }
-.form-contacto .form-contacto label:nth-child(6) {
+.form-contacto label:nth-child(6) {
   grid-area: cel;
 }
-.form-contacto .form-contacto label:nth-child(7) {
+.form-contacto label:nth-child(7) {
   grid-area: mensaje;
+  text-align: center;
+  justify-self: center;
 }
-.form-contacto .form-contacto label:nth-child(8) {
+.form-contacto label:nth-child(8) {
   grid-area: novedades;
+  text-align: center;
+  justify-self: center;
 }
-
 .form-contacto .limpiar {
   grid-area: limpiar;
   justify-self: end;
   padding: 8px;
   margin-right: 10px;
-  background-color: rgb(26, 19, 7);
+  background-color: rgb(217, 223, 223);
   border-radius: 5px;
 }
-
 .form-contacto .enviar {
   grid-area: enviar;
   justify-self: start;
   padding: 8px;
   margin-left: 10px;
-  background-color: rgb(26, 19, 7);
+  background-color: rgb(217, 223, 223);
+  border-radius: 5px;
 }
 
+@media (max-width: 1070px) {
+  .form-contacto h1 {
+    font-size: 18px;
+  }
+}
 @media (max-width: 900px) {
   .form-contacto {
     width: auto;
     margin-top: 0;
     grid-template-areas: "contacto  contacto" "texto    texto" "nombre   nombre" "apellido apellido" "email    email" "cel       cel" "mensaje   mensaje" "novedades novedades" "limpiar    enviar";
-  }
-}
-@media (max-width: 1070px) {
-  .form-contacto h1 {
-    font-size: 18px;
   }
 }
 /*----galeria nosotros----*/
@@ -302,6 +371,10 @@ portrait ---> retrato, + alto q ancho
 }
 /*ESTILOS PREGUNTAS*/
 .pregunta {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
   font-style: italic;
   font-weight: bold;
   background-color: rgb(147, 163, 163);
@@ -314,6 +387,10 @@ portrait ---> retrato, + alto q ancho
 }
 
 .respuesta {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
   margin: 0;
   padding: 0;
 }

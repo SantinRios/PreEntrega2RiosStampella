@@ -104,6 +104,7 @@ i {
 .navbar-toggler {
   background-color: transparent !important;
   border: none;
+  margin-left: auto; /* Alinea el icono a la derecha */
 }
 
 .navbar-toggler-icon {
